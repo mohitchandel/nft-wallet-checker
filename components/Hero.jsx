@@ -1,19 +1,16 @@
 import React from "react";
-import { Container, Box, Heading } from "@chakra-ui/react";
+import { Container, Box, Heading, ChakraProvider } from "@chakra-ui/react";
 
 export const Hero = () => {
   return (
-    <>
-      <Container centerContent>
-        <Box padding="4" bg="blue.400" color="black" maxW="md">
+    <ChakraProvider>
+      <Container centerContent maxW='container.xl'>
+        <Box padding="4" color="black">
           <Heading as="h2" size="3xl" >
-            Discover Every 
-          </Heading>
-          <Heading as="h2" size="3xl" >
-            NFTs Collections 
+            Search For NFTs Collections 
           </Heading>
         </Box>
       </Container>
-    </>
+      </ChakraProvider>
   );
 };
