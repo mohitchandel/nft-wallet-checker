@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Navigation />
-      <Hero />
+      <Hero heading={"Search For NFTs Collections"}/>
       <NftCollection />
       <Footer />
     </>
