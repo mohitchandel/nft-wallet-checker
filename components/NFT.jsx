@@ -9,8 +9,7 @@ import {
   Image,
 } from "@chakra-ui/react";
 
-export const NFT = ({image, name, tokenId}) => {
-
+export const NFT = ({ image, name, tokenId }) => {
   return (
     <>
       <Box
@@ -62,7 +61,7 @@ export const NFT = ({image, name, tokenId}) => {
           <Heading fontSize={"2xl"} fontFamily={"body"} fontWeight={500}>
             {tokenId}
           </Heading>
-          
+
           {/* <Stack direction={"row"} align={"center"}>
             <Text fontWeight={800} fontSize={"xl"}>
               $57

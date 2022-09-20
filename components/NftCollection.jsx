@@ -27,9 +27,10 @@ export const NftCollection = () => {
     return ethers.utils.isAddress(address);
   };
 
+  /* A function that is called when the user clicks the button. */
   const fetchNftData = async () => {
     setIsLoading(true);
-    
+
     if (!validateAddress(contAddress)) {
       setIsLoading(false);
       alert("Please enter valid address");

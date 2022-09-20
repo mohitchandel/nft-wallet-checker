@@ -19,6 +19,7 @@ export const Navigation = (props) => {
   );
 };
 
+// Logo
 function Logo(props) {
   return (
     <Box {...props}>
@@ -29,6 +30,7 @@ function Logo(props) {
   );
 }
 
+// Close Menu Icon
 const CloseIcon = () => (
   <svg width="24" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
     <title>Close</title>
@@ -39,6 +41,7 @@ const CloseIcon = () => (
   </svg>
 );
 
+// Creating Menu Icon
 const MenuIcon = () => (
   <svg
     width="24px"
@@ -51,6 +54,7 @@ const MenuIcon = () => (
   </svg>
 );
 
+// Creating Menu Toggle
 const MenuToggle = ({ toggle, isOpen }) => {
   return (
     <Box display={{ base: "block", md: "none" }} onClick={toggle}>
@@ -59,6 +63,7 @@ const MenuToggle = ({ toggle, isOpen }) => {
   );
 };
 
+// Creating Menu Items
 const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
   return (
     <Link href={to}>
@@ -69,6 +74,7 @@ const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
   );
 };
 
+// Creating Menu Links
 const MenuLinks = ({ isOpen }) => {
   return (
     <Box
@@ -93,6 +99,7 @@ const MenuLinks = ({ isOpen }) => {
   );
 };
 
+// Navigation Container
 const NavBarContainer = ({ children, ...props }) => {
   return (
     <Flex

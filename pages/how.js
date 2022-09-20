@@ -7,11 +7,11 @@ export default function About() {
   return (
     <>
       <Navigation />
-      <Hero heading={"How To Use"}/>
+      <Hero heading={"How To Use"} />
       <Container marginY={6} height={"55vh"}>
         <Text>
-          All You need to do is to add NFT address in the input box and then click the 
-          GET NFT button
+          All You need to do is to add NFT address in the input box and then
+          click the GET NFT button
         </Text>
       </Container>
       <Footer />

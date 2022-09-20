@@ -7,7 +7,7 @@ export default function About() {
   return (
     <>
       <Navigation />
-      <Hero heading={"About"}/>
+      <Hero heading={"About"} />
       <Container marginY={6}>
         <Text>
           As interest in the NFT space continues to grow, this disruptive new
