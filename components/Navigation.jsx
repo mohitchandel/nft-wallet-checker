@@ -90,6 +90,7 @@ const MenuLinks = ({ isOpen }) => {
         pt={[4, 4, 0, 0]}
       >
         <MenuItem to="/">Home</MenuItem>
+        <MenuItem to="/wallet">Wallet NFT</MenuItem>
         <MenuItem to="/how">How It works </MenuItem>
         <MenuItem to="/about">About </MenuItem>
         <div display="block">
