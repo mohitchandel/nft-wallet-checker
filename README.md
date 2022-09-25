@@ -1,4 +1,3 @@
-50 NFT is a project which will show you the 50 NFTs from the collection
 
 ## How To Use
 
