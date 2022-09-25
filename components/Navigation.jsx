@@ -1,17 +1,18 @@
-import React from "react";
-import { Link, Box, Flex, Text, Button, Stack } from "@chakra-ui/react";
-import { ConnectButton } from "@rainbow-me/rainbowkit";
+import React from 'react';
+import { Link, Box, Flex, Text, Button, Stack } from '@chakra-ui/react';
+import { ConnectButton } from '@rainbow-me/rainbowkit';
+import UAuth from '@uauth/js';
+import { Login } from './login';
 
 export const Navigation = (props) => {
   const [isOpen, setIsOpen] = React.useState(false);
-
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <NavBarContainer bg={"#000"} {...props}>
+    <NavBarContainer bg={'#000'} {...props}>
       <Logo
         w="100px"
-        color={["white", "white", "primary.500", "primary.500"]}
+        color={['white', 'white', 'primary.500', 'primary.500']}
       />
       <MenuToggle toggle={toggle} isOpen={isOpen} />
       <MenuLinks isOpen={isOpen} />
@@ -24,7 +25,7 @@ function Logo(props) {
   return (
     <Box {...props}>
       <Text fontSize="lg" fontWeight="bold">
-        50 NFTs
+        NWT
       </Text>
     </Box>
   );
@@ -57,14 +58,14 @@ const MenuIcon = () => (
 // Creating Menu Toggle
 const MenuToggle = ({ toggle, isOpen }) => {
   return (
-    <Box display={{ base: "block", md: "none" }} onClick={toggle}>
+    <Box display={{ base: 'block', md: 'none' }} onClick={toggle}>
       {isOpen ? <CloseIcon /> : <MenuIcon />}
     </Box>
   );
 };
 
 // Creating Menu Items
-const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
+const MenuItem = ({ children, isLast, to = '/', ...rest }) => {
   return (
     <Link href={to}>
       <Text display="block" {...rest}>
@@ -78,14 +79,14 @@ const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
 const MenuLinks = ({ isOpen }) => {
   return (
     <Box
-      display={{ base: isOpen ? "block" : "none", md: "block" }}
-      flexBasis={{ base: "100%", md: "auto" }}
+      display={{ base: isOpen ? 'block' : 'none', md: 'block' }}
+      flexBasis={{ base: '100%', md: 'auto' }}
     >
       <Stack
         spacing={8}
         align="center"
-        justify={["center", "space-between", "flex-end", "flex-end"]}
-        direction={["column", "row", "row", "row"]}
+        justify={['center', 'space-between', 'flex-end', 'flex-end']}
+        direction={['column', 'row', 'row', 'row']}
         pt={[4, 4, 0, 0]}
       >
         <MenuItem to="/">Home</MenuItem>
@@ -93,6 +94,9 @@ const MenuLinks = ({ isOpen }) => {
         <MenuItem to="/about">About </MenuItem>
         <div display="block">
           <ConnectButton />
+        </div>
+        <div display="block">
+          <Login />
         </div>
       </Stack>
     </Box>
@@ -110,8 +114,8 @@ const NavBarContainer = ({ children, ...props }) => {
       w="100%"
       mb={8}
       p={8}
-      bg={["primary.500", "primary.500", "transparent", "transparent"]}
-      color={["white", "white", "primary.700", "primary.700"]}
+      bg={['primary.500', 'primary.500', 'transparent', 'transparent']}
+      color={['white', 'white', 'primary.700', 'primary.700']}
       {...props}
     >
       {children}
