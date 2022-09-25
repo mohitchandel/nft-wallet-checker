@@ -18,7 +18,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Stack
 
-- Deployed on : Vercel
 - Framework : NextJs
 - wallet Connect Library : Wagmi, Rainbow kit
-- NFT API : Nftport
+- NFT API : covalent
