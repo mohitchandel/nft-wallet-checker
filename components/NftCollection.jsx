@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { ethers } from "ethers";
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { ethers } from 'ethers';
 import {
   Center,
   Image,
@@ -13,13 +13,13 @@ import {
   Heading,
   ChakraProvider,
   Text,
-} from "@chakra-ui/react";
-import { NFT } from "./NFT";
+} from '@chakra-ui/react';
+import { NFT } from './NFT';
 
 export const NftCollection = () => {
   const [nftData, setNftData] = useState({});
   const [contAddress, setContAddress] = useState(
-    "0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB"
+    '0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB'
   );
   const [isLoading, setIsLoading] = useState(false);
 
@@ -33,21 +33,21 @@ export const NftCollection = () => {
 
     if (!validateAddress(contAddress)) {
       setIsLoading(false);
-      alert("Please enter valid address");
+      alert('Please enter valid address');
       return;
     }
 
     const options = {
-      method: "GET",
+      method: 'GET',
       url: `${process.env.NEXT_PUBLIC_NFTPORT_API_URL}/v0/nfts/${contAddress}`,
       params: {
-        chain: "ethereum",
+        chain: 'ethereum',
         account_address: contAddress,
-        page_size: "50",
-        include: "metadata",
+        page_size: '50',
+        include: 'metadata',
       },
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
         Authorization: `${process.env.NEXT_PUBLIC_NFTPORT_API_KEY}`,
       },
     };
@@ -86,19 +86,19 @@ export const NftCollection = () => {
           disabled={isLoading}
           onClick={fetchNftData}
           bg="#0e76fd"
-          color={"#fff"}
+          color={'#fff'}
           marginY={4}
         >
-          {isLoading ? "Loading..." : "Get NFTs"}
+          {isLoading ? 'Loading...' : 'Get NFTs'}
         </Button>
         <Grid marginY={10}>
           <GridItem>
             <Center>
               <Image
-                rounded={"xl"}
+                rounded={'xl'}
                 height={50}
                 width={50}
-                objectFit={"cover"}
+                objectFit={'cover'}
                 src={nftData.contract?.metadata?.thumbnail_url}
               />
             </Center>
