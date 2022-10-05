@@ -9,7 +9,7 @@ export const Login = (props) => {
 
   const uauth = new UAuth({
     clientID: 'd6a62f91-4529-4524-9d4c-68ff96682525',
-    redirectUri: 'http://localhost:3000',
+    redirectUri: 'https://nft-wallet-checker.vercel.app/',
     scope: 'openid wallet',
   });
 
