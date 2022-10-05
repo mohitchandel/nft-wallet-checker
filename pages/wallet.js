@@ -11,7 +11,7 @@ export default function Wallet() {
   return (
     <>
       <Navigation />
-      <WorldCoinId />
+      {/* <WorldCoinId /> */}
       <Hero heading={' Get wallet NFT'} />
       <WalletConnection />
       <Footer />

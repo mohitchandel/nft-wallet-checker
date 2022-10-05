@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Navigation />
-      <WorldCoinId />
+      {/* <WorldCoinId /> */}
       <Hero heading={'Search For NFTs Collections'} />
       <NftCollection />
       <Footer />
